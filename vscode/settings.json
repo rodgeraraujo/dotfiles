@@ -1,0 +1,27 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "breadcrumbs.enabled": true,
+    "workbench.colorTheme": "Supernova",
+    "sync.gist": "1bf87a50f56cdd390a6e01c0931bd92c",
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "window.zoomLevel": 0,
+    "sync.forceUpload": true,
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospacepde",
+    "editor.fontSize": 12,
+    "editor.fontLigatures": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "extensions.ignoreRecommendations": true,
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
+}
