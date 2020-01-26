@@ -2,7 +2,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/rodger/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
 
 # Path to NVM
 export NVM_DIR="$HOME/.nvm"
@@ -29,6 +28,8 @@ plugins=(
     zsh-autosuggestions
 )
 autoload -U compinit && compinit
+
+source $ZSH/oh-my-zsh.sh
 
 # Added by Zplugin's installer
 source "$HOME/.zplugin/bin/zplugin.zsh"
