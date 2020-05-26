@@ -2,10 +2,12 @@
 	name = Rogério Araújo
 	email = rogerio.araujo@mail.com
 	username = rodgeraraujo
+
+
 [core]
 	editor = vscode
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/rodger/.gitignore_global
 [web]
 	browser = google-chrome
 [rerere]
@@ -174,6 +176,8 @@
 	s = status
 	sb = status -s -b
 	#############
+	slm = shortlog -s -n --all --no-merges
+	#############
 	sa = stash apply
 	sc = stash clear
 	sd = stash drop
@@ -190,3 +194,9 @@
 	w = show
 	wp = show -p
 	wr = show -p --no-color
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

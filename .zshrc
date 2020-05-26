@@ -31,12 +31,6 @@ autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
-# Added by Zplugin's installer
-source "$HOME/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-# End of Zplugin installer's chunk
-
 # Spacechip theme config
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
@@ -74,7 +68,17 @@ alias dkcpstop="docker-compose stop"
 alias postgres="docker run --rm --name pg-docker -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=d0ck3r -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres"
 
 # MySQL Container alias
-alias mysql="docker run --rm --name mysql-docker -p 3306:3306 -v $HOME/docker/volumes/mysql:/var/lib/mysql -e MYSQL_USER=docker -e MYSQL_PASSWORD=d0ck3r -d mysql:latest"
+# alias mysql="docker run --rm --name mysql-docker -p 3306:3306 -v $HOME/docker/volumes/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=d0ck3r -e MYSQL_ROOT_HOST=% -d mysql/mysql-server:latest"
+
+# Skecth alias
+alias skecth="sh /Users/$USER/sketchtrial/sketch.sh &"
 
 #Git alias
 alias clone="git clone"
+
+# Added by Zplugin's installer
+source "$HOME/.zplugin/bin/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+# End of Zplugin installer's chunk
+[ -f "/Users/rodger/.shopify-app-cli/shopify.sh" ] && source "/Users/rodger/.shopify-app-cli/shopify.sh"
